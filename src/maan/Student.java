@@ -1,9 +1,8 @@
-package maan
+package maan;
+import java.io.BufferedReader;
 
-	import java.io.BufferedReader;
-	import java.io.IOException;
+import java.io.IOException;
 	import java.io.InputStreamReader;
-	public class Constructor {
 
 	public class Student {
 	    String roll_no;//instance variables
@@ -11,7 +10,7 @@ package maan
 	    char grade;
 	    double eng_marks;
 	    double maths_marks;
-	    double sci_marks,average,total_marks;
+	    double sci_marks,Average,total_marks;
 	    BufferedReader s=new BufferedReader(new InputStreamReader(System.in));
 	    Student() throws IOException
 	    {
@@ -30,43 +29,46 @@ package maan
 	    {
 	    total_marks=	(int)(eng_marks+maths_marks+sci_marks);
 	    }
-	     void cal_ average()
+	     void  Average ()
 	    {
-	        average=(int)(eng_marks+maths_marks+sci_marks)/3;
+	        Average=(int)(eng_marks+maths_marks+sci_marks)/3;
 	    }
-	    void  find_grade()
+	    void  grade()
 	    {
-	    	if(average>=85 )
+	    	if(Average>=85 )
 	    	{
-	    		System.out.println(name+" "+average);
-	 System.out.println("A+ GRADE");
+	    		System.out.println(name+" "+Average);
+	 System.out.println("A+ grade");
 	    	}
-	    	else if(average>=70 && average<85)
+	    	else if(Average>=70 && Average<85)
 	    	{
-	       		System.out.println(name+" "+average);
-	       	 System.out.println("A GRADE");
+	       		System.out.println(name+" "+Average);
+	       	 System.out.println("A grade");
 	       	    	}	
-	    	else if(average>=50 && average<70)
+	    	else if(Average>=50 && Average<70)
 	    	{
-	       		System.out.println(name+" "+average);
-	       	 System.out.println("B GRADE");
+	       		System.out.println(name+" "+Average);
+	       	 System.out.println("b grade");
 	    	}
-	    	else if(average>=40 && average<50)
+	    	else if(Average>=40 && Average<50)
 	    	{
-	       		System.out.println(name+" "+average);
-	       	 System.out.println("C GRADE");
+	       		System.out.println(name+" "+Average);
+	       	    System.out.println("c grade");
+	    	}
 	    	}
 	    
-	    public static void main(String[] args)throws IOException()
+	    public  void main (String[] args) throws IOException
 	    {
-	        Student s1=new S
-	        //Student s2=new Student(2,78,82,98);
-	        //Student s1=new Student();
+	        Student s1=new Student();
 	        Student s2=new Student();
-	        s1.average();
-	        s2.average();
-	        s1.display();
-	        s2.display();
-	        
+	        s1.cal_total_marks();
+	        s2 .cal_total_marks();
+	        s1.Average();
+	        s2 .Average();
+	       s1.grade();	        
+           s2.grade();	  
+	    }
+	    }
+	    
+  
 
-}
